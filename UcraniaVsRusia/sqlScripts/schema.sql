@@ -2,7 +2,7 @@ CREATE TABLE mmUsuario (
 	mmUsuario TEXT,
 	mmNombre TEXT,
 	mmClave TEXT
-, mmFechaCreacion TEXT);
+, mmFechaCreacion TEXT, mmCedula TEXT);
 
 
 CREATE TABLE mmCoordenadas (
@@ -13,14 +13,15 @@ CREATE TABLE mmCoordenadas (
 );
 
 INSERT INTO mmUsuario
-(mmUsuario, mmNombre, mmClave, mmFechaCreacion)
-VALUES('profesor', 'Profesor', 'MTIzNA==', '12/03/2023');
+(mmUsuario, mmNombre, mmClave, mmFechaCreacion, mmCedula)
+VALUES('profesor', 'Profesor', 'MTIzNA==', '12/03/2023', '1752864379');
 INSERT INTO mmUsuario
-(mmUsuario, mmNombre, mmClave, mmFechaCreacion)
-VALUES('mercedez.martinez@epn.edu.ec', 'Mercedez', 'MTc1Mjg2NDM3OQ==', '12/03/2023');
+(mmUsuario, mmNombre, mmClave, mmFechaCreacion, mmCedula)
+VALUES('mercedez.martinez@epn.edu.ec', 'Mercedez', 'MTc1Mjg2NDM3OQ==', '12/03/2023', '1752864379');
 INSERT INTO mmUsuario
-(mmUsuario, mmNombre, mmClave, mmFechaCreacion)
-VALUES('alumno2', 'Alumno2', 'MTIzNA==', '12/03/2023');
+(mmUsuario, mmNombre, mmClave, mmFechaCreacion, mmCedula)
+VALUES('alumno2', 'Alumno2', 'MTIzNA==', '12/03/2023', '1752864379');
+
 
 
 
