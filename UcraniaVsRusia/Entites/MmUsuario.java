@@ -5,11 +5,20 @@ public class MmUsuario {
     private String mmNombre;
     private String mmClave;
     private String mmFechaCreacion;
-    public MmUsuario(String mmUsuario, String mmNombre, String mmClave, String mmFechaCreacion) {
+    private String mmCedula;
+    public String getMmCedula() {
+        return mmCedula;
+    }
+    public void setMmCedula(String mmCedula) {
+        this.mmCedula = mmCedula;
+    }
+    public MmUsuario(String mmUsuario, String mmNombre, String mmClave, String mmFechaCreacion,
+            String mmCedula) {
         this.mmUsuario = mmUsuario;
         this.mmNombre = mmNombre;
         this.mmClave = mmClave;
         this.mmFechaCreacion = mmFechaCreacion;
+        this.mmCedula = mmCedula;
     }
     public String getMmUsuario() {
         return mmUsuario;

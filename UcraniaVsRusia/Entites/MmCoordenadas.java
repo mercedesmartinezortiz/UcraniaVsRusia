@@ -1,23 +1,24 @@
 package UcraniaVsRusia.Entites;
 
 public class MmCoordenadas {
-    private String mmCapacidadBelica;
+    private Integer mmCapacidadBelica;
     private String mmGeoLocalizacion;
     private String mmDetalleDelArsenal;
     private String mmFechaIngreso;
 
     
-    public MmCoordenadas(String mmCapacidadBelica, String mmGeoLocalizacion, String mmDetalleDelArsenal,
+    public MmCoordenadas(
+            Integer mmCapacidadBelica, String mmGeoLocalizacion, String mmDetalleDelArsenal,
             String mmFechaIngreso) {
         this.mmCapacidadBelica = mmCapacidadBelica;
         this.mmGeoLocalizacion = mmGeoLocalizacion;
         this.mmDetalleDelArsenal = mmDetalleDelArsenal;
         this.mmFechaIngreso = mmFechaIngreso;
     }
-    public String getMmCapacidadBelica() {
+    public Integer getMmCapacidadBelica() {
         return mmCapacidadBelica;
     }
-    public void setMmCapacidadBelica(String mmCapacidadBelica) {
+    public void setMmCapacidadBelica(Integer mmCapacidadBelica) {
         this.mmCapacidadBelica = mmCapacidadBelica;
     }
     public String getMmGeoLocalizacion() {

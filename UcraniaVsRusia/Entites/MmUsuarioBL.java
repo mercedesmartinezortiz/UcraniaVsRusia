@@ -17,7 +17,7 @@ public class MmUsuarioBL {
             ResultSet rs = mmUsuarioDAC.mmGetUsuarioYClave(mmUsuario, mmClave);
             while (rs.next()) {
                 MmUsuario s = new MmUsuario(rs.getString("mmUsuario"), rs.getString("mmNombre"),
-                        rs.getString("mmClave"), rs.getString("mmFechaCreacion"));
+                        rs.getString("mmClave"), rs.getString("mmFechaCreacion"), rs.getString("mmCedula"));
                 mmUsuarios.add(s);
             }
             if(mmUsuarios != null && !mmUsuarios.isEmpty()){

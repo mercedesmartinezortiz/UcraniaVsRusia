@@ -16,12 +16,12 @@ public class AppConfiguration {
             InputStream configInput = new FileInputStream(pathConfigFile);
             config.load(configInput);
 
-            System.out.println(">> (ok) AppConfiguration.load()");
+            //System.out.println(">> (ok) AppConfiguration.load()");
             return true;
         }  
         catch (IOException e) {  //FileNotFoundException
             e.printStackTrace();
-            System.out.println(">> (error) AppConfiguration.load() "+ e.getMessage());
+            //System.out.println(">> (error) AppConfiguration.load() "+ e.getMessage());
         }
         return false;
     }
@@ -42,11 +42,11 @@ public class AppConfiguration {
             String dbPath = config.getProperty(APP.GLOBAL.DB_PATH);
            
             dbPath = "jdbc:sqlite:" + dbPath.replace('/', '\\') + "\\" + dbName;
-            System.out.println("coneeccion con " + dbPath);
+            //System.out.println("coneeccion con " + dbPath);
             return dbPath;  
         }
         else
-            System.out.println(">> (issue) AppConfiguration.DB_PATH(), llamar primero a AppConfiguration.load() y agregar DB_PATH en CONFIG ");
+            //System.out.println(">> (issue) AppConfiguration.DB_PATH(), llamar primero a AppConfiguration.load() y agregar DB_PATH en CONFIG ");
         return "";
     }
 

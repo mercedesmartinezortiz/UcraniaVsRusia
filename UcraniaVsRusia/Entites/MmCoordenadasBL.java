@@ -8,15 +8,15 @@ import java.util.List;
 import UcraniaVsRusia.DataAccess.MmCoordenadaDAC;
 import UcraniaVsRusia.Framework.AppException;
 
-public class MmCorrdenadasBL {
-    public List<MmCoordenadas> getAllCoordenadas() throws AppException {
+public class MmCoordenadasBL {
+    public List<MmCoordenadas> mmGetAllCoordenadas() throws AppException {
         try {
             MmCoordenadaDAC mmCoordenadaDAC = new MmCoordenadaDAC();
             List<MmCoordenadas> mmCoordenadas = new ArrayList<MmCoordenadas>();
 
             ResultSet rs = mmCoordenadaDAC.getAllCoordenadas();
             while (rs.next()) {
-                MmCoordenadas s = new MmCoordenadas(rs.getString("mmCapacidadBelica"), rs.getString("mmGeoLocalizacion"),
+                MmCoordenadas s = new MmCoordenadas(rs.getInt("mmCapacidadBelica"), rs.getString("mmGeoLocalizacion"),
                         rs.getString("mmDetalleDelArsenal"), rs.getString("mmFechaIngreso"));
                 mmCoordenadas.add(s);
             }
