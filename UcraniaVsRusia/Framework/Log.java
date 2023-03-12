@@ -1,4 +1,4 @@
-package Framework;
+package UcraniaVsRusia.Framework;
 
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
@@ -15,35 +15,35 @@ public class Log {
    try {
         Handler consoleHandler = new ConsoleHandler(); //Estableceremos un manejador de errores
         Handler fileHandler = new FileHandler("app.log", true);
-        /*Colocaremos la ruta donde se guardará el log, la propiedad true indica que siempre se escribirá sobre 
-        el mismo archivo y no generará una copia hasta que este archivo sea igual a 5 mb de tamaño*/
+        /*Colocaremos la ruta donde se guardarï¿½ el log, la propiedad true indica que siempre se escribirï¿½ sobre 
+        el mismo archivo y no generarï¿½ una copia hasta que este archivo sea igual a 5 mb de tamaï¿½o*/
         
-         SimpleFormatter simpleFormatter = new SimpleFormatter();// Se establece únicamente para generar un formato para la presentación de los errores o el trace
+         SimpleFormatter simpleFormatter = new SimpleFormatter();// Se establece ï¿½nicamente para generar un formato para la presentaciï¿½n de los errores o el trace
          fileHandler.setFormatter(simpleFormatter);
          LOG_MONITOREO.addHandler(consoleHandler);
          LOG_MONITOREO.addHandler(fileHandler);
    
-         consoleHandler.setLevel(Level.ALL); //Este comando comenzará el manejador de errores
+         consoleHandler.setLevel(Level.ALL); //Este comando comenzarï¿½ el manejador de errores
          fileHandler.setLevel(Level.ALL); //Este comando se ejecuta para comenzar el proceso de registro del logger
          // En ambos comando se debe colocar el nivel de registro de errores en el log por ende se colocar Level.ALL
    
-   /*El siguiente comando se utilizará para registrar lo que necesitemos ver dentro del log, aquí es donde definimos que datos se imprimiran en él*/
+   /*El siguiente comando se utilizarï¿½ para registrar lo que necesitemos ver dentro del log, aquï¿½ es donde definimos que datos se imprimiran en ï¿½l*/
    
    LOG_MONITOREO.log(Level.INFO, "Nueva Solicitud de Logueo");
    LOG_MONITOREO.log(Level.INFO, "Usuario: " + usuario);
-   LOG_MONITOREO.log(Level.INFO, "Contraseña: " + password);
+   LOG_MONITOREO.log(Level.INFO, "Contraseï¿½a: " + password);
    
-   //Esta validación la realizaremos únicamente como ejemplo
+   //Esta validaciï¿½n la realizaremos ï¿½nicamente como ejemplo
    
    if(usuario.equals("emmax77") && password.equals("1234567")){
        LOG_MONITOREO.log(Level.INFO, "Logueo exitoso!");
        res = "Logueo exitoso!";
    }else{
-       LOG_MONITOREO.log(Level.WARNING, "Usuario o contraseña incorrecto");
-       res = "Usuario o contraseña incorrecto";
+       LOG_MONITOREO.log(Level.WARNING, "Usuario o contraseï¿½a incorrecto");
+       res = "Usuario o contraseï¿½a incorrecto";
    }
    
-   //Luego de realizar los registros debemos cerrar el hilo de conexión a nuestro archivo
+   //Luego de realizar los registros debemos cerrar el hilo de conexiï¿½n a nuestro archivo
    
    fileHandler.close();
    consoleHandler.close();

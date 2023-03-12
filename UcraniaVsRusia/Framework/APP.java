@@ -1,6 +1,6 @@
-package Framework;
+package UcraniaVsRusia.Framework;
 /**
- * Definición de variables globales constantes 
+ * Definiciï¿½n de variables globales constantes 
  * Configuraciones del estado de aplicacion
  * singleton with enum
  */
@@ -8,6 +8,7 @@ public enum APP {
     GLOBAL;
     public final  String  DB_NAME           = "DB_NAME";
     public final  String  DB_PATH           = "DB_PATH";  
+    public final  String  URL_DATA_BASE           = "url_DataBase";  
     //Constantes con definicion  
     private final String  EXCEPTION_UNDEFINED;
     private final String  EXCEPTION_UNDEFINED_CLASS;
@@ -16,8 +17,8 @@ public enum APP {
      
     APP(){
         //Configuraciones del estado de aplicacion
-        EXCEPTION_UNDEFINED_CLASS   = "Excepción sin decripción de clase ";
-        EXCEPTION_UNDEFINED         = "Excepción sin decripción";
+        EXCEPTION_UNDEFINED_CLASS   = "Excepciï¿½n sin decripciï¿½n de clase ";
+        EXCEPTION_UNDEFINED         = "Excepciï¿½n sin decripciï¿½n";
         LOG_ON_OFF          = true;
         PI                  = 1.14;
     }

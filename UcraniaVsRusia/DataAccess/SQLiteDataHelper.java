@@ -2,7 +2,7 @@
  *  pat_mic@hotmail.com
  *  Version 1.0
  */
-package DataAccess;
+package UcraniaVsRusia.DataAccess;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

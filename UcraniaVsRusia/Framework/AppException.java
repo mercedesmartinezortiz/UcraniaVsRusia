@@ -1,4 +1,4 @@
-package Framework;
+package UcraniaVsRusia.Framework;
 
 public class AppException extends Exception  {
 

@@ -1,4 +1,4 @@
-package Framework;
+package UcraniaVsRusia.Framework;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,11 +34,14 @@ public class AppConfiguration {
         return "";
     }
     public static String getDBPathConnection(){
-        //"jdbc:sqlite:data\\TinderPet.db"
+        
         if (config != null && config.containsKey(APP.GLOBAL.DB_PATH)){
             String dbName  = getDBName();
-            String dbPath  = config.getProperty(APP.GLOBAL.DB_PATH); 
-            dbPath =  "jdbc:sqlite:" + dbPath.replace('/', '\\') + "\\\\" + dbName;
+            
+            String dbPath = config.getProperty(APP.GLOBAL.DB_PATH);
+           
+            dbPath = "jdbc:sqlite:" + dbPath.replace('/', '\\') + "\\" + dbName;
+            System.out.println("coneeccion con " + dbPath);
             return dbPath;  
         }
         else
@@ -46,14 +49,7 @@ public class AppConfiguration {
         return "";
     }
 
-    // public static void setPropertyValue(String property, String value){
-    //     try{
-    //         configOutput = new FileOutputStream("data/config.properties");
-    //         config.setProperty(property, value);
-    //     } catch(Exception e){
-    //         JOptionPane.showMessageDialog(null, "Error guardando configuraci�n\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-    //     }
-    // }
+
     
 
 }
