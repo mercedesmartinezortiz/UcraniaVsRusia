@@ -3,6 +3,7 @@ package UcraniaVsRusia.Framework;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Base64;
 import java.util.Properties;
 
 public class AppConfiguration {
@@ -50,6 +51,9 @@ public class AppConfiguration {
     }
 
 
+    public static String encode(String entradaOriginal){
+        return  Base64.getEncoder().encodeToString(entradaOriginal.getBytes());
+    }
     
 
 }
